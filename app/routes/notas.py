@@ -2,7 +2,8 @@ import httpx
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
-from app import models, schemas
+from app import models
+from app import schemas
 from app.database import get_db
 from app.services.s3_service import generar_pdf, subir_pdf_a_s3, generar_url_descarga
 from app.services.sns_service import publicar_notificacion
